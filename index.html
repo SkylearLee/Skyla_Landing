@@ -1,123 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sky's Website</title>
+// Photo stack click effect
+const photos = document.querySelectorAll(".stack-photo");
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+photos.forEach(function(photo) {
+  photo.addEventListener("click", function() {
+    photos.forEach(function(p) {
+      p.classList.remove("active");
+    });
 
-  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Unica+One&display=swap" rel="stylesheet">
+    photo.classList.add("active");
+  });
+});
 
-  <link rel="stylesheet" href="style.css">
-</head>
 
-<body>
-  <header class="top">
-    <h1>Skylear.Landing</h1>
-    <p>Skyla Azeharie's personal website</p>
-  </header>
+// Folder tab click effect
+const tabs = document.querySelectorAll(".folder-tab");
+const panels = document.querySelectorAll(".tab-panel");
 
-  <main>
-    <section class="card">
-      <h2>About Me</h2>
-      <div class="profile-pic">
-        <img src="profile.jpg" alt="Profile Picture">
-      </div>
+tabs.forEach(function(tab) {
+  tab.addEventListener("click", function() {
+    tabs.forEach(function(item) {
+      item.classList.remove("active");
+    });
 
-      <p>
-          I’m interested in toxicology, environmental health, and building tech
-          to solve real-world problems.
-     </p>
+    panels.forEach(function(panel) {
+      panel.classList.remove("active");
+    });
 
-     <div class="card-row">
-        <div class="card-section">
-          <h3>Medical Interests</h3>
-          <p>
-            ...
-          </p>
-        </div>
+    tab.classList.add("active");
 
-        <div class="card-section">
-          <h3>Tech Interests</h3>
-          <p>
-            ...
-          </p>
-        </div>
+    const selectedPanel = document.getElementById(tab.dataset.tab);
 
-        <div class="card-section">
-          <h3>Long term goals</h3>
-          <p>
-            ...
-          </p>
-        </div>
-      </div>
+    if (selectedPanel) {
+      selectedPanel.classList.add("active");
+    }
+  });
+});
 
-    </section>
+// Experience board click effect
+const experienceButtons = document.querySelectorAll(".pin-note");
+const experiencePanels = document.querySelectorAll(".exp-panel");
 
-    <section class="card">
-      <h2>Academics</h2>
-      <div class="card-row">
-        <div class="card-section">
-            <h3>High School</h3>
-            <p>
-              ...
-            </p>
-          </div>
+experienceButtons.forEach(function(button) {
+  button.addEventListener("click", function() {
+    experienceButtons.forEach(function(item) {
+      item.classList.remove("active");
+    });
 
-          <div class="card-section">
-            <h3>College</h3>
-            <p>
-              ...
-            </p>
-          </div>
-      </div>
-    </section>
+    experiencePanels.forEach(function(panel) {
+      panel.classList.remove("active");
+    });
 
-    
+    button.classList.add("active");
 
-    <section class="card">
-      <h2>Research/Projects</h2>
-      <div class="card-row">
-          <div class="card-section">
-            <h3>Wet Lab</h3>
-            <p>
-              ...
-            </p>
-          </div>
+    const selectedExperience = document.getElementById(button.dataset.exp);
 
-          <div class="card-section">
-            <h3>Dry Lab</h3>
-            <p>
-              ...
-            </p>
-          </div>
-
-      </div>
-
-      <div class="card-row">
-         <div class="card-section">
-            <h3>Tech Based</h3>
-            <p>
-              ...
-            </p>
-          </div>
-
-          <div class="card-section">
-            <h3>Personal</h3>
-            <p>
-              ...
-            </p>
-          </div>
-
-        </div>
-    </section>
-
-    <section class="card">
-      <h2>Awards/Certifications/Licenses</h2>
-      <p>Coming soon...</p>
-    </section>
-  </main>
-</body>
-</html>
+    if (selectedExperience) {
+      selectedExperience.classList.add("active");
+    }
+  });
+});
