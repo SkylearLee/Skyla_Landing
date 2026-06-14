@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experience | Sky's Website</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Unica+One&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="logo">Skyla</a>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="project.html">Projects</a>
+      <a href="experience.html">Experience</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <header class="top">
+    <h1>Experience</h1>
+    <p>Academics, leadership, work, volunteering, and certifications.</p>
+  </header>
+
+  <main>
+  <section class="card experience-board-card">
+    <h2>Experience Board</h2>
+    <p class="board-intro">
+      Click a pinned note to open each section.
+    </p>
+
+    <div class="experience-board">
+
+      <div class="pin-grid">
+        <button class="pin-note active" data-exp="academics">
+          <span class="pin-dot"></span>
+          <h3>Academics</h3>
+          <p>High school, college, coursework, and STEM background.</p>
+        </button>
+
+        <button class="pin-note" data-exp="leadership">
+          <span class="pin-dot"></span>
+          <h3>Leadership</h3>
+          <p>Clubs, organizations, event planning, and community work.</p>
+        </button>
+
+        <button class="pin-note" data-exp="work">
+          <span class="pin-dot"></span>
+          <h3>Work</h3>
+          <p>Jobs, internships, pharmacy work, and campus experience.</p>
+        </button>
+
+        <button class="pin-note" data-exp="awards">
+          <span class="pin-dot"></span>
+          <h3>Awards</h3>
+          <p>Honors, recognitions, scholarships, and achievements.</p>
+        </button>
+
+        <button class="pin-note" data-exp="certifications">
+          <span class="pin-dot"></span>
+          <h3>Certifications</h3>
+          <p>Training, licenses, lab safety, EMT, and technical skills.</p>
+        </button>
+
+        <button class="pin-note" data-exp="volunteering">
+          <span class="pin-dot"></span>
+          <h3>Volunteering</h3>
+          <p>Service, outreach, health education, and community projects.</p>
+        </button>
+      </div>
+
+      <div class="opened-note">
+
+        <div class="exp-panel active" id="academics">
+          <p class="note-label">opened note</p>
+          <h3>Academics</h3>
+          <p>
+            Add your academic journey here. You can include your high school STEM background,
+            AP courses, robotics, college major, coursework, and research interests.
+          </p>
+
+          <ul>
+            <li><strong>High School:</strong> Add AP classes, robotics, awards, and early STEM experiences.</li>
+            <li><strong>College:</strong> Add your pharmacology/toxicology and computer science studies.</li>
+            <li><strong>Relevant Courses:</strong> Add biology, chemistry, computer science, toxicology, or public health courses.</li>
+          </ul>
+        </div>
+
+        <div class="exp-panel" id="leadership">
+          <p class="note-label">opened note</p>
+          <h3>Leadership</h3>
+          <p>
+            Add leadership positions, club responsibilities, events you planned, and ways you helped organize people.
+          </p>
+
+          <ul>
+            <li><strong>MEDLIFE at UB:</strong> Add your founder/president role and club mission.</li>
+            <li><strong>Events:</strong> Add hygiene kit packing, general interest meetings, donation drives, or workshops.</li>
+            <li><strong>Skills:</strong> Add communication, planning, outreach, and team coordination.</li>
+          </ul>
+        </div>
+
+        <div class="exp-panel" id="work">
+          <p class="note-label">opened note</p>
+          <h3>Work Experience</h3>
+          <p>
+            Add jobs, internships, pharmacy experience, campus work, and professional responsibilities.
+          </p>
+
+          <ul>
+            <li><strong>Pharmacy:</strong> Add patient-facing tasks, restocking, calls, DME, OTC, or compounding exposure.</li>
+            <li><strong>Campus Jobs:</strong> Add Student Union work or university roles.</li>
+            <li><strong>Internships:</strong> Add summer programs, biotech, healthcare, or technical experience.</li>
+          </ul>
+        </div>
+
+        <div class="exp-panel" id="awards">
+          <p class="note-label">opened note</p>
+          <h3>Awards</h3>
+          <p>
+            Add awards, honors, scholarships, competitions, or recognition here.
+          </p>
+
+          <ul>
+            <li><strong>Academic Honors:</strong> Add dean’s list, honors college, or scholarships.</li>
+            <li><strong>STEM Awards:</strong> Add robotics, coding, science, or research awards.</li>
+            <li><strong>Community Recognition:</strong> Add service or leadership recognition.</li>
+          </ul>
+        </div>
+
+        <div class="exp-panel" id="certifications">
+          <p class="note-label">opened note</p>
+          <h3>Certifications & Licenses</h3>
+          <p>
+            Add professional training, safety certificates, licenses, or technical credentials.
+          </p>
+
+          <ul>
+            <li><strong>EMT Training:</strong> Add completion details or related experience.</li>
+            <li><strong>Lab Training:</strong> Add safety, animal handling, biohazard, or research training.</li>
+            <li><strong>Tech Skills:</strong> Add coding languages, software, or platforms.</li>
+          </ul>
+        </div>
+
+        <div class="exp-panel" id="volunteering">
+          <p class="note-label">opened note</p>
+          <h3>Volunteering</h3>
+          <p>
+            Add service experiences, outreach, health education, mentoring, or community work.
+          </p>
+
+          <ul>
+            <li><strong>Health Outreach:</strong> Add MEDLIFE-related community service.</li>
+            <li><strong>STEM Mentoring:</strong> Add robotics mentoring or student support.</li>
+            <li><strong>Community Projects:</strong> Add donation drives, education events, or local volunteering.</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+</main>
+
+  <script src="script.js"></script>
+</body>
+</html>
